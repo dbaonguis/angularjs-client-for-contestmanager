@@ -1,1 +1,1 @@
-browse-secured-restful-site
+AngularJS Client for Contest Manager 
