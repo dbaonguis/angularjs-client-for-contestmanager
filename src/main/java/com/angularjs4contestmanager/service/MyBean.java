@@ -1,4 +1,4 @@
-package com.example.service;
+package com.angularjs4contestmanager.service;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import com.example.domain.RestContestant;
+import com.angularjs4contestmanager.domain.RestContestant;
 
 @Service
 public class MyBean {

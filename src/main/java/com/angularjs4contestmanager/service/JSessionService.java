@@ -1,10 +1,10 @@
-package com.example.service;
+package com.angularjs4contestmanager.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.domain.JSession;
-import com.example.repository.JSessionRepository;
+import com.angularjs4contestmanager.domain.JSession;
+import com.angularjs4contestmanager.repository.JSessionRepository;
 
 @Service
 public class JSessionService {

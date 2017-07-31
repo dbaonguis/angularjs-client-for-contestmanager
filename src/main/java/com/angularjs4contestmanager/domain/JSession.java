@@ -1,4 +1,4 @@
-package com.example.domain;
+package com.angularjs4contestmanager.domain;
 
 import java.util.Date;
 

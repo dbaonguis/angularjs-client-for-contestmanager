@@ -1,4 +1,4 @@
-package com.example.controller;
+package com.angularjs4contestmanager.controller;
 
 import java.io.IOException;
 import java.util.Calendar;
@@ -16,10 +16,10 @@ import org.springframework.web.client.RestClientException;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.example.domain.JSession;
-import com.example.domain.RestContestant;
-import com.example.service.JSessionService;
-import com.example.service.MyBean;
+import com.angularjs4contestmanager.domain.JSession;
+import com.angularjs4contestmanager.domain.RestContestant;
+import com.angularjs4contestmanager.service.JSessionService;
+import com.angularjs4contestmanager.service.MyBean;
 
 
 @Controller

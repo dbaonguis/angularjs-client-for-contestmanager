@@ -1,8 +1,9 @@
-package com.example.repository;
+package com.angularjs4contestmanager.repository;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-import com.example.domain.JSession;
+
+import com.angularjs4contestmanager.domain.JSession;
 
 @Repository
 public interface JSessionRepository extends CrudRepository<JSession, Long> {
