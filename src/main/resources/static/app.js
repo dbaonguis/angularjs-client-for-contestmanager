@@ -1,20 +1,31 @@
 var myApp = angular.module('myAngularJSApp', ['ngMessages', 'ngResource', 'ngRoute']);
 
-myApp.config(function($routeProvider) {
+
+
+
+myApp.config(['$routeProvider', function($routeProvider) {
     $routeProvider
         .when('/', {
-            templateUrl: 'pages/main.html',
-            controller: 'mainController'
+            templateUrl: 'pages/home.html',
+            controller: 'homeController',
+            requireLogin: false
+        })
+        .when('/login', {
+            templateUrl: 'pages/login.html',
+            controller: 'loginController',
+            requireLogin: false
         })
         .when('/second', {
             templateUrl: 'pages/second.html',
-            controller: 'secondController'
+            controller: 'secondController',
+            requireLogin: true
         })
         .when('/second/:num', {
             templateUrl: 'pages/second.html',
-            controller: 'secondController'
+            controller: 'secondController',
+            requireLogin: true
         });
-});
+}]);
 
 myApp.service('nameService', function() {
     var self = this;
@@ -25,7 +36,9 @@ myApp.service('nameService', function() {
     };
 });
 
-myApp.controller('mainController', ['$scope', '$timeout', '$log', '$filter', '$resource', '$http', 'nameService', function($scope, $timeout, $log, $filter, $resource, $http, nameService) {
+
+
+myApp.controller('homeController', ['$scope', '$timeout', '$log', '$filter', '$resource', '$http', 'nameService', function($scope, $timeout, $log, $filter, $resource, $http, nameService) {
     
     $scope.handle = '';
     $scope.characters = 5;
@@ -83,6 +96,10 @@ myApp.controller('mainController', ['$scope', '$timeout', '$log', '$filter', '$r
     
     $log.info($scope.rules);
     
+    
+}]);
+
+myApp.controller('loginController', ['$scope', '$log', '$resource', '$http', '$routeParams', 'nameService', function($scope, $log, $resource, $http, $routeParams, nameService) {
     
 }]);
 
